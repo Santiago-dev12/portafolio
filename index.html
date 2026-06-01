@@ -152,6 +152,21 @@
         ul li {
             margin-bottom: 8px;
         }
+
+        /* Estilos para los inputs del formulario en Glassmorphism */
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            color: #0f172a;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+            color: #0f172a;
+        }
     </style>
 </head>
 
@@ -176,21 +191,20 @@
                     problemas reales de negocio.
                 </p>
 
-                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                    <a href="https://drive.google.com/file/d/1auPmkcYrFC5jfeTfE2FbB-HeMOQpZID5/view?usp=sharing"
-                        target="_blank"
-                        class="btn btn-primary rounded-pill px-4 py-2 shadow btn-custom d-flex align-items-center gap-2">
-                        <i class="bi bi-file-earmark-pdf-fill fs-5"></i> Ver mi CV Completo (PDF)
-                    </a>
-                    <a href="https://github.com/Moisantiagogr" target="_blank"
-                        class="btn btn-dark rounded-pill px-4 py-2 shadow btn-custom d-flex align-items-center gap-2">
-                        <i class="bi bi-github fs-5"></i> Moisantiagogr
-                    </a>
-                    <a href="https://github.com/Santiago-dev12" target="_blank"
-                        class="btn btn-light rounded-pill px-4 py-2 shadow btn-custom d-flex align-items-center gap-2 border border-secondary">
-                        <i class="bi bi-github fs-5"></i> Santiago-dev12
-                    </a>
-                </div>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                <a href="https://drive.google.com/file/d/1auPmkcYrFC5jfeTfE2FbB-HeMOQpZID5/view?usp=sharing" target="_blank"
+                    class="btn btn-primary rounded-pill px-4 py-2 shadow btn-custom d-flex align-items-center gap-2">
+                    <i class="bi bi-file-earmark-pdf-fill fs-5"></i> Ver mi CV Completo (PDF)
+                </a>
+                <a href="https://github.com/Moisantiagogr" target="_blank"
+                    class="btn btn-dark rounded-pill px-4 py-2 shadow btn-custom d-flex align-items-center gap-2">
+                    <i class="bi bi-github fs-5"></i> Moisantiagogr
+                </a>
+                <a href="https://github.com/Santiago-dev12" target="_blank"
+                    class="btn btn-light rounded-pill px-4 py-2 shadow btn-custom d-flex align-items-center gap-2 border border-secondary">
+                    <i class="bi bi-github fs-5"></i> Santiago-dev12
+                </a>
+            </div>
             </div>
         </section>
 
@@ -461,7 +475,8 @@
                                 Oracle</div>
                             <div class="col-md-6 mb-3"><strong>Cloud & DevOps:</strong> AWS (EC2, RDS, S3), Firebase,
                                 Docker, Jenkins</div>
-                            <div class="col-md-6 mb-3"><strong>Herramientas:</strong> Git, GitHub, SonarQube, Postman</div>
+                            <div class="col-md-6 mb-3"><strong>Herramientas:</strong> Git, GitHub, SonarQube, Postman
+                            </div>
                             <div class="col-md-6 mb-3"><strong>Metodologías:</strong> Scrum, Agile</div>
                             <div class="col-md-6 mb-3"><strong>Otros:</strong> ETL, REST y SOAP APIs, JWT, IoT</div>
                             <div class="col-12 mt-1"><strong>Competencias:</strong> Liderazgo, Trabajo en Equipo,
@@ -488,6 +503,70 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section id="contacto" class="pb-5">
+            <h2 class="text-center mb-4">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="glass-card p-4 p-md-5">
+                        <div class="row g-5">
+
+                            <div class="col-md-5 d-flex flex-column justify-content-center">
+                                <h3 class="mb-3">¡Hablemos!</h3>
+                                <p class="mb-4">¿Tienes un proyecto en mente, una vacante o simplemente quieres
+                                    conectar? ¡Escríbeme!</p>
+
+                                <a href="https://wa.me/527773412106?text=Hola%20Moisés,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte."
+                                    target="_blank"
+                                    class="btn btn-success rounded-pill px-4 py-3 shadow btn-custom d-flex align-items-center justify-content-center gap-2 mb-4 fs-5">
+                                    <i class="bi bi-whatsapp"></i> Enviar WhatsApp
+                                </a>
+
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                                    <span>moises.gonzret@gmail.com</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+                                    <span>Emiliano Zapata, Morelos, México</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-7 border-start border-secondary-subtle ps-md-5">
+                                <h4 class="mb-4">Envíame un correo</h4>
+
+                                <form action="mailto:moises.gonzret@gmail.com" method="POST" enctype="text/plain">
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label fw-bold">Tu Nombre</label>
+                                        <input type="text" class="form-control px-3 py-2 rounded-3" id="nombre"
+                                            name="Nombre_" placeholder="Ej. Juan Pérez" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="asunto" class="form-label fw-bold">Asunto</label>
+                                        <input type="text" class="form-control px-3 py-2 rounded-3" id="asunto"
+                                            name="Asunto_" placeholder="Ej. Propuesta de trabajo" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="mensaje" class="form-label fw-bold">Mensaje</label>
+                                        <textarea class="form-control px-3 py-2 rounded-3" id="mensaje" name="Mensaje_"
+                                            rows="4" placeholder="Escribe aquí tu consulta..." required></textarea>
+                                    </div>
+                                    <button type="submit"
+                                        class="btn btn-primary rounded-pill px-4 py-2 shadow btn-custom w-100">
+                                        <i class="bi bi-send-fill me-2"></i> Enviar Correo
+                                    </button>
+                                </form>
+                                <p class="text-muted small mt-3 text-center">
+                                    <i class="bi bi-info-circle me-1"></i> Al presionar enviar, se abrirá tu aplicación
+                                    de correo predeterminada (Gmail, Outlook, etc.) con la información lista.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
