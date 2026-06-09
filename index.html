@@ -47,7 +47,6 @@
             overflow-x: hidden;
         }
 
-        /* Background grid */
         body::before {
             content: '';
             position: fixed;
@@ -60,7 +59,6 @@
             pointer-events: none;
         }
 
-        /* Glow blobs */
         .blob {
             position: fixed;
             border-radius: 50%;
@@ -85,7 +83,6 @@
             right: -150px;
         }
 
-        /* Nav */
         nav {
             position: fixed;
             top: 0;
@@ -134,7 +131,6 @@
             color: var(--accent);
         }
 
-        /* Sections */
         section {
             position: relative;
             z-index: 1;
@@ -147,7 +143,6 @@
             padding-top: 160px;
         }
 
-        /* Hero */
         .hero-tag {
             display: inline-flex;
             align-items: center;
@@ -256,10 +251,9 @@
             transform: translateY(-2px);
         }
 
-        /* Stats row */
         .stats-row {
             display: flex;
-            gap: 40px;
+            gap: 24px 40px;
             margin-top: 4rem;
             padding-top: 2.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -285,7 +279,6 @@
             letter-spacing: 0.06em;
         }
 
-        /* Section headings */
         .section-label {
             display: inline-flex;
             align-items: center;
@@ -321,7 +314,6 @@
             font-size: 0.95rem;
         }
 
-        /* Cards */
         .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -336,7 +328,6 @@
             border-color: rgba(74, 222, 128, 0.3);
         }
 
-        /* Experience timeline */
         .timeline {
             display: flex;
             flex-direction: column;
@@ -423,14 +414,13 @@
         }
 
         .exp-card ul li::before {
-            content: '→';
+            content: '\2192';
             position: absolute;
             left: 0;
             color: var(--accent);
             font-size: 0.8rem;
         }
 
-        /* Tags */
         .tags {
             display: flex;
             flex-wrap: wrap;
@@ -455,7 +445,6 @@
             background: var(--accent-dim);
         }
 
-        /* Projects grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -501,7 +490,6 @@
             transform: scale(1.03);
         }
 
-        /* Carousel minimal */
         .carousel-wrap {
             position: relative;
         }
@@ -517,7 +505,6 @@
             height: 200px;
             object-fit: cover;
             object-position: top;
-            transition: none;
         }
 
         .carousel-btn {
@@ -593,7 +580,6 @@
             margin-bottom: 16px;
         }
 
-        /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -623,7 +609,6 @@
             gap: 6px;
         }
 
-        /* Education */
         .edu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -663,32 +648,35 @@
             color: var(--text-muted);
         }
 
-        /* Contact */
-        .contact-wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
+        /* Contact — solo WhatsApp */
+        .contact-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto;
+            gap: 2rem;
         }
 
-        @media (max-width: 700px) {
-            .contact-wrap {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .contact-info h3 {
+        .contact-center h3 {
             font-family: 'DM Serif Display', serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #fff;
-            margin-bottom: 1rem;
             letter-spacing: -0.02em;
         }
 
-        .contact-info p {
+        .contact-center p {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
         }
 
         .contact-link {
@@ -698,7 +686,7 @@
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.88rem;
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             transition: color 0.2s;
         }
@@ -717,90 +705,31 @@
             width: 20px;
         }
 
-        .contact-form-wrap {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 30px;
-            backdrop-filter: blur(8px);
-        }
-
-        .contact-form-wrap h4 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            font-size: 0.78rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-        }
-
-        input[type=text],
-        input[type=email],
-        textarea {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 10px 14px;
-            font-family: 'Geist', sans-serif;
-            font-size: 0.9rem;
-            color: var(--text);
-            outline: none;
-            transition: border-color 0.2s;
-            margin-bottom: 16px;
-        }
-
-        input[type=text]:focus,
-        input[type=email]:focus,
-        textarea:focus {
-            border-color: var(--accent);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .btn-send {
-            width: 100%;
-            background: var(--accent);
-            color: #051a0a;
-            font-family: 'Geist', sans-serif;
-            font-weight: 500;
-            font-size: 0.9rem;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
+        .btn-whatsapp {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: background 0.2s, transform 0.2s;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 12px;
             text-decoration: none;
+            transition: all 0.25s;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
         }
 
-        .btn-send:hover {
-            background: #86efac;
-            transform: translateY(-1px);
+        .btn-whatsapp:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.35);
         }
 
-        .form-hint {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: 10px;
+        .btn-whatsapp i {
+            font-size: 1.3rem;
         }
 
-        /* Footer */
         footer {
             position: relative;
             z-index: 1;
@@ -811,7 +740,6 @@
             color: var(--text-muted);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -828,13 +756,8 @@
             .stats-row {
                 gap: 24px;
             }
-
-            .contact-wrap {
-                grid-template-columns: 1fr;
-            }
         }
 
-        /* Scroll fade-in */
         .fade-up {
             opacity: 0;
             transform: translateY(24px);
@@ -869,22 +792,21 @@
         <div class="hero-tag">Disponible para nuevas oportunidades</div>
         <h1>Moises<br><em>Santiago</em></h1>
         <p class="hero-desc">
-            Ingeniero en Desarrollo y Gestión de Software con experiencia práctica en proyectos de backend, desarrollo web
-            fullstack, análisis de datos e infraestructura cloud. Especializado en diseño de APIs REST con Java y Spring Boot,
-            modelado de bases de datos SQL y despliegue de sistemas en AWS; con participación adicional en pipelines ETL, interfaces
-            ReactJS y automatización DevOps. Orientado a resolver problemas reales de negocio con código limpio, arquitecturas
-            escalables y metodologías ágiles — capaz de aportar valor en equipos de backend, fullstack, datos o cloud
+            Ingeniero en Desarrollo y Gestión de Software con experiencia práctica en proyectos de backend, desarrollo
+            web
+            fullstack, análisis de datos e infraestructura cloud. Especializado en diseño de APIs REST con Java y Spring
+            Boot,
+            modelado de bases de datos SQL y despliegue de sistemas en AWS; con participación adicional en pipelines
+            ETL, interfaces
+            ReactJS y automatización DevOps.
         </p>
         <div class="hero-cta">
-            <a href="https://drive.google.com/file/d/1TTyQetIWr6z4wptSnY62gZG6-ht6dbMK/view?usp=sharing"
+            <a href="https://drive.google.com/file/d/1N91fqzO-8BBXqYz8VWTE3mZ8tjdM1WZK/view?usp=sharing"
                 class="btn-primary-custom" target="_blank">
                 <i class="bi bi-download"></i> Descargar CV
             </a>
             <a href="https://www.linkedin.com/in/santiago-gr12" class="btn-outline-custom" target="_blank">
                 <i class="bi bi-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/Santiago-dev12" class="btn-outline-custom" target="_blank">
-                <i class="bi bi-github"></i> GitHub
             </a>
         </div>
         <div class="stats-row">
@@ -892,7 +814,6 @@
                 <div class="num">5<span>+</span></div>
                 <div class="lbl">Años de formación técnica</div>
             </div>
-           
             <div class="stat-item">
                 <div class="num">4<span>+</span></div>
                 <div class="lbl">Proyectos colaborativos</div>
@@ -905,12 +826,11 @@
         <div class="section-label">Trayectoria</div>
         <h2>Experiencia profesional</h2>
         <p class="section-sub">Desarrollo de soluciones backend y fullstack en contextos empresariales reales.</p>
-
         <div class="timeline">
 
             <div class="exp-card fade-up">
                 <div class="exp-header">
-                    <span class="exp-company">Desarrollador ETL & BI</span>
+                    <span class="exp-company">Desarrollador ETL &amp; BI</span>
                     <span class="exp-date">Ene 2026 – Abr 2026</span>
                 </div>
                 <div class="exp-role">Design Applications and Online Services · Estadía Profesional</div>
@@ -975,10 +895,8 @@
         <h2>Proyectos destacados</h2>
         <p class="section-sub">Sistemas construidos con arquitecturas reales, trabajo en equipo y foco en calidad de
             código.</p>
-
         <div class="projects-grid">
 
-            <!-- SACIT -->
             <div class="project-card fade-up">
                 <div class="project-media">
                     <video autoplay loop muted playsinline>
@@ -991,10 +909,9 @@
                         <span class="project-period">Ene – Abr 2025</span>
                     </div>
                     <div class="project-role">Líder de Desarrollo · Backend</div>
-                    <p class="project-desc">
-                        Sistema inteligente de agendamiento de citas. Lideré el equipo de desarrollo backend con Spring
-                        Boot, implementé arquitectura REST desacoplada y revisiones de calidad con SonarQube.
-                    </p>
+                    <p class="project-desc">Sistema inteligente de agendamiento de citas. Lideré el equipo de desarrollo
+                        backend con Spring Boot, implementé arquitectura REST desacoplada y revisiones de calidad con
+                        SonarQube.</p>
                     <div class="tags">
                         <span class="tag">Spring Boot</span><span class="tag">ReactJS</span>
                         <span class="tag">MySQL</span><span class="tag">SonarQube</span>
@@ -1002,7 +919,6 @@
                 </div>
             </div>
 
-            <!-- MEDONLINE -->
             <div class="project-card fade-up">
                 <div class="project-media">
                     <video autoplay loop muted playsinline>
@@ -1015,10 +931,8 @@
                         <span class="project-period">Ene – Abr 2025</span>
                     </div>
                     <div class="project-role">Desarrollador Full Stack</div>
-                    <p class="project-desc">
-                        Plataforma médica con Django: gestión de pacientes, notificaciones automáticas por correo y API
-                        REST para sincronización de módulos administrativos.
-                    </p>
+                    <p class="project-desc">Plataforma médica con Django: gestión de pacientes, notificaciones
+                        automáticas por correo y API REST para sincronización de módulos administrativos.</p>
                     <div class="tags">
                         <span class="tag">Django</span><span class="tag">Python</span>
                         <span class="tag">MySQL</span><span class="tag">REST API</span>
@@ -1026,7 +940,6 @@
                 </div>
             </div>
 
-            <!-- DOCES -->
             <div class="project-card fade-up">
                 <div class="project-media">
                     <video autoplay loop muted playsinline>
@@ -1039,10 +952,8 @@
                         <span class="project-period">Sep – Dic 2024</span>
                     </div>
                     <div class="project-role">Desarrollador Fullstack</div>
-                    <p class="project-desc">
-                        Sistema de gestión de trámites con control de acceso por roles. Refactoring de componentes
-                        React, optimización de servicios backend y autenticación JWT con Axios.
-                    </p>
+                    <p class="project-desc">Sistema de gestión de trámites con control de acceso por roles. Refactoring
+                        de componentes React, optimización de servicios backend y autenticación JWT con Axios.</p>
                     <div class="tags">
                         <span class="tag">Spring Boot</span><span class="tag">ReactJS</span>
                         <span class="tag">Axios</span><span class="tag">JWT</span>
@@ -1050,7 +961,6 @@
                 </div>
             </div>
 
-            <!-- SIGEA -->
             <div class="project-card fade-up">
                 <div class="project-media carousel-wrap" id="sigea-carousel">
                     <div class="carousel-slides" id="sigea-slides">
@@ -1069,10 +979,8 @@
                         <span class="project-period">Ene – Abr 2024</span>
                     </div>
                     <div class="project-role">Desarrollador Fullstack · Analista</div>
-                    <p class="project-desc">
-                        Aplicación web y móvil responsiva con ReactJS y React Native. Infraestructura desplegada en AWS
-                        con documentación técnica completa del sistema.
-                    </p>
+                    <p class="project-desc">Aplicación web y móvil responsiva con ReactJS y React Native.
+                        Infraestructura desplegada en AWS con documentación técnica completa del sistema.</p>
                     <div class="tags">
                         <span class="tag">ReactJS</span><span class="tag">React Native</span>
                         <span class="tag">Spring Boot</span><span class="tag">AWS</span>
@@ -1080,7 +988,6 @@
                 </div>
             </div>
 
-            <!-- ADM-ENERGY -->
             <div class="project-card fade-up">
                 <div class="project-media carousel-wrap" id="adm-carousel">
                     <div class="carousel-slides" id="adm-slides">
@@ -1099,10 +1006,8 @@
                         <span class="project-period">May – Ago 2024</span>
                     </div>
                     <div class="project-role">Desarrollador Backend</div>
-                    <p class="project-desc">
-                        Plataforma de gestión energética solar. Backend con autenticación JWT, arquitectura REST segura
-                        y despliegue en AWS con alta disponibilidad.
-                    </p>
+                    <p class="project-desc">Plataforma de gestión energética solar. Backend con autenticación JWT,
+                        arquitectura REST segura y despliegue en AWS con alta disponibilidad.</p>
                     <div class="tags">
                         <span class="tag">Spring Boot</span><span class="tag">JWT</span>
                         <span class="tag">AWS</span><span class="tag">MySQL</span>
@@ -1110,21 +1015,18 @@
                 </div>
             </div>
 
-            <!-- BI -->
             <div class="project-card fade-up">
                 <div class="project-media">
                     <img src="bi.jpg" alt="Dashboard BI">
                 </div>
                 <div class="project-body">
                     <div class="project-header">
-                        <span class="project-name">Solución BI & ETL</span>
+                        <span class="project-name">Solución BI &amp; ETL</span>
                         <span class="project-period">Ene – Abr 2026</span>
                     </div>
                     <div class="project-role">Desarrollador de Datos</div>
-                    <p class="project-desc">
-                        Arquitectura ETL con Python/Pandas para procesamiento de datos empresariales. Dashboards
-                        automatizados en Power BI y entorno contenerizado con Docker.
-                    </p>
+                    <p class="project-desc">Arquitectura ETL con Python/Pandas para procesamiento de datos
+                        empresariales. Dashboards automatizados en Power BI y entorno contenerizado con Docker.</p>
                     <div class="tags">
                         <span class="tag">Python</span><span class="tag">Pandas</span>
                         <span class="tag">Power BI</span><span class="tag">Docker</span><span class="tag">SQL
@@ -1141,59 +1043,45 @@
         <div class="section-label">Stack técnico</div>
         <h2>Habilidades</h2>
         <p class="section-sub">Tecnologías con las que construyo soluciones día a día.</p>
-
         <div class="skills-grid">
             <div class="skill-group fade-up">
                 <div class="skill-group-label">Lenguajes</div>
                 <div class="skill-items">
-                    <span class="tag">Java</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">JavaScript</span>
+                    <span class="tag">Java</span><span class="tag">Python</span><span class="tag">JavaScript</span>
                 </div>
             </div>
             <div class="skill-group fade-up">
                 <div class="skill-group-label">Backend</div>
                 <div class="skill-items">
-                    <span class="tag">Spring Boot</span>
-                    <span class="tag">Spring Security</span>
-                    <span class="tag">Django</span>
-                    <span class="tag">REST APIs</span>
-                    <span class="tag">JWT</span>
+                    <span class="tag">Spring Boot</span><span class="tag">Spring Security</span>
+                    <span class="tag">Django</span><span class="tag">REST APIs</span><span class="tag">JWT</span>
                 </div>
             </div>
             <div class="skill-group fade-up">
                 <div class="skill-group-label">Frontend</div>
                 <div class="skill-items">
-                    <span class="tag">ReactJS</span>
-                    <span class="tag">React Native</span>
-                    <span class="tag">HTML5 & CSS3</span>
+                    <span class="tag">ReactJS</span><span class="tag">React Native</span><span class="tag">HTML5 &amp;
+                        CSS3</span>
                 </div>
             </div>
             <div class="skill-group fade-up">
                 <div class="skill-group-label">Bases de datos</div>
                 <div class="skill-items">
-                    <span class="tag">MySQL</span>
-                    <span class="tag">SQL Server</span>
-                    <span class="tag">MongoDB</span>
+                    <span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">MongoDB</span>
                 </div>
             </div>
             <div class="skill-group fade-up">
-                <div class="skill-group-label">Cloud & DevOps</div>
+                <div class="skill-group-label">Cloud &amp; DevOps</div>
                 <div class="skill-items">
-                    <span class="tag">AWS (EC2, RDS, S3)</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">Jenkins</span>
-                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">AWS (EC2, RDS, S3)</span><span class="tag">Docker</span>
+                    <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span>
                 </div>
             </div>
             <div class="skill-group fade-up">
-                <div class="skill-group-label">Herramientas & Métodos</div>
+                <div class="skill-group-label">Herramientas &amp; Métodos</div>
                 <div class="skill-items">
-                    <span class="tag">Git / GitHub</span>
-                    <span class="tag">SonarQube</span>
-                    <span class="tag">Power BI</span>
-                    <span class="tag">Scrum</span>
-                    <span class="tag">ETL</span>
+                    <span class="tag">Git / GitHub</span><span class="tag">SonarQube</span>
+                    <span class="tag">Power BI</span><span class="tag">Scrum</span><span class="tag">ETL</span>
                 </div>
             </div>
         </div>
@@ -1204,7 +1092,6 @@
         <div class="section-label">Formación</div>
         <h2>Educación</h2>
         <p class="section-sub">Base académica sólida complementada con experiencia práctica en proyectos reales.</p>
-
         <div class="edu-grid">
             <div class="edu-card fade-up">
                 <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
@@ -1227,51 +1114,30 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO — solo WhatsApp -->
     <section id="contacto">
         <div class="section-label">Conectemos</div>
         <h2>Contacto</h2>
 
-        <div class="contact-wrap">
-            <div class="contact-info">
-                <h3>¿Tienes una oportunidad?</h3>
-                <p>Estoy abierto a posiciones junior, trainee o prácticas en desarrollo backend, fullstack o ingeniería
-                    de datos. No dudes en escribirme.</p>
+        <div class="contact-center fade-up">
+            <p>Estoy abierto a posiciones junior, trainee o prácticas en desarrollo backend, fullstack o ingeniería de
+                datos. Escríbeme directo por WhatsApp.</p>
 
-                <a href="https://wa.me/527773412106?text=Hola%20Moisés,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte."
-                    target="_blank" class="btn-primary-custom" style="margin-bottom: 1.5rem; display:inline-flex;">
-                    <i class="bi bi-whatsapp"></i> Enviar WhatsApp
-                </a>
+            <a href="https://wa.me/527773412106?text=Hola%20Moisés,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte."
+                target="_blank" class="btn-whatsapp">
+                <i class="bi bi-whatsapp"></i> Abrir WhatsApp
+            </a>
 
+            <div class="contact-links">
                 <a href="mailto:moises.gonzret@gmail.com" class="contact-link">
                     <i class="bi bi-envelope-fill"></i> moises.gonzret@gmail.com
                 </a>
                 <a href="https://www.linkedin.com/in/santiago-gr12" target="_blank" class="contact-link">
                     <i class="bi bi-linkedin"></i> linkedin.com/in/santiago-gr12
                 </a>
-                <a href="https://github.com/Santiago-dev12" target="_blank" class="contact-link">
-                    <i class="bi bi-github"></i> github.com/Santiago-dev12
-                </a>
                 <div class="contact-link" style="cursor:default;">
                     <i class="bi bi-geo-alt-fill"></i> Emiliano Zapata, Morelos, México
                 </div>
-            </div>
-
-            <div class="contact-form-wrap">
-                <h4>Envíame un mensaje</h4>
-                <form action="mailto:moises.gonzret@gmail.com" method="POST" enctype="text/plain">
-                    <label for="nombre">Tu nombre</label>
-                    <input type="text" id="nombre" name="Nombre_" placeholder="Ej. Ana García" required>
-                    <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="Asunto_" placeholder="Ej. Oportunidad de trabajo" required>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="Mensaje_" placeholder="Cuéntame sobre la oportunidad o proyecto..."
-                        required></textarea>
-                    <button type="submit" class="btn-send">
-                        <i class="bi bi-send-fill"></i> Enviar correo
-                    </button>
-                    <p class="form-hint">Se abrirá tu cliente de correo con el mensaje listo.</p>
-                </form>
             </div>
         </div>
     </section>
@@ -1281,7 +1147,6 @@
     </footer>
 
     <script>
-        // Carousel
         const carouselState = {};
         function moveCarousel(id, dir) {
             const slides = document.getElementById(id + '-slides');
@@ -1296,13 +1161,9 @@
             s.style.transition = 'transform 0.35s ease';
         });
 
-        // Scroll fade-in
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    observer.unobserve(e.target);
-                }
+                if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
